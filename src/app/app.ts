@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Endereco } from './components/endereco/endereco';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Endereco],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
