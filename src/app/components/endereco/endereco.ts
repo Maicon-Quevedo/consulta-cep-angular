@@ -13,16 +13,34 @@ export class Endereco {
 
   cep = '';
   logradouro = '';
+  complemento = '';
+  unidade = '';
   bairro = '';
+  localidade = '';
   uf = '';
+  estado = '';
+  regiao = '';
+  ibge = '';
+  gia = '';
+  ddd = '';
+  siaf = '';
 
   buscarCep(){
     this.cepService.buscar(this.cep).subscribe(
       {
         next: (dados) => {
           this.logradouro = dados.logradouro;
+          this.complemento = dados.complemento;
+          this.unidade = dados.unidade;
           this.bairro = dados.bairro;
+          this.localidade = dados.localidade;
           this.uf = dados.uf;
+          this.estado = dados.estado;
+          this.regiao = dados.regiao;
+          this.ibge = dados.ibge;
+          this.gia = dados.gia;
+          this.ddd = dados.ddd;
+          this.siaf = dados.siafi;
         }
       }
     )
